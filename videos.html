@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+    }
+    body{
+        background-color: silver;
+    }
+.start{
+    width: 100%;
+    height: 300px;
+    background-color: rgb(27, 70, 27);
+}
+.start h1{
+    
+    
+    color: white;
+    text-align: center;
+    top: -150px;
+    font-size: 70px;
+}
+.nav{
+    
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    position:sticky;
+    top:0;
+}
+.nav ul{
+  
+    margin: 0;
+    padding: 0;
+    
+    background-color: #333;
+   
+    
+    
+}
+.nav ul li{
+    
+    font-size: 30px;
+    
+    display: inline-block;
+    padding: 20px;
+    
+}
+.nav ul li a{
+    
+    margin: 5px;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    list-style-type: none;
+}
+.active{
+    background-color:rgb(27, 70, 27);
+}
+.no:hover{
+    background-color: rgb(0,0,0,0.8);
+}
+.toggle{
+    background-color: #333;
+    width: 100%;
+    padding: 0.5em;
+    display: none;
+    justify-content: end;
+}
+
+.fa:hover{
+    color: green !important;
+}
+.fa{
+    float: right !important;
+}
+@media only screen and (max-width: 700px){
+    .nav ul li{
+        display: flex;
+        
+        transition: 0.5s;
+        
+    }
+    .nav{
+        transform: translate(-100%, 0);
+        display:none;
+    }
+    .toggle{
+        display: flex;
+    }
+    .toggle2{
+        display: none;
+    }
+    
+    .video{
+        width: 100%;
+    }
+    
+}
+@media only screen and (min-width: 700px){
+    .nav{
+        transform: translate(0,0);
+    }
+}
+</style>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Form</title>
+</head>
+<body>
+    
+    <div class ="start">
+        <br><br><br><br><br><br>
+        <h1>
+            Videos
+        </h1>
+        
+    </div>
+    <script>
+        
+        var count = 0;
+        
+        function yare(){
+            var nav = document.getElementById('nav');
+            
+            
+            if(nav.style.transform = "translate(-100%, 0)"){
+                nav.style.transform = "translate(0, 0)";
+                document.getElementById('yare2').style.display= "flex";
+                document.getElementById('yare').style.display= "none";
+                document.getElementById('nav').style.display="block"
+                }
+        }
+        function yare2(){
+            var nav = document.getElementById('nav');
+            if(nav.style.transform = "translate(0, 0)"){
+                nav.style.transform = "translate(-100%, 0)";
+                document.getElementById('yare').style.display= "flex";
+                document.getElementById('yare2').style.display= "none";
+                document.getElementById('nav').style.display="none";
+                }
+                
+        }
+    </script>
+    <div class="toggle">
+    <div class ="toggle1" id="yare">
+    <i onclick ="yare()" id="toggle" class="fa fa-bars" style="font-size:30px; color: white; display: flex; justify-content: end; left: 1em; cursor: pointer;"  ></i>
+    </div><div class ="toggle2" id="yare2">
+        <i onclick ="yare2()" id="toggle" class="fa fa-bars" style="font-size:30px; color: white; display: flex; justify-content: end; left: 1em; cursor: pointer;"  ></i>
+        </div>
+    </div>
+    <div class ="nav" id="nav">
+        <ul>
+            <li class ="no" id="li"><a href="index.html">Home</a></li><li id="li" class ="no"><a href="homework.html">Homework</a></li><li id="li" class ="active"><a href="Videos.html">Videos</a></li><li class ="no" id="li"><a href="episode.html">Episode</a>
+        </ul>
+    </div>
+    <br><br>
+
+
+
+
+
+
+    
+<center>
+<style>
+    button{
+        font-size: 30px;
+        background-color: green;
+        color: white;
+        padding: 0.5em;
+        border: none;
+        border-radius: 2em;
+    }
+    button:hover{
+        background-color: black;
+        color: green;
+    }
+    h1{
+        font-size: 50px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    .attendance{
+        border-bottom: 1em black solid;
+    }
+    .table{
+        width: 90%;
+        
+    }
+    button a{
+        color: white;
+        text-decoration: none;
+    }
+    button:hover a{
+        color: green;
+    }
+</style>
+
+    <div class ="term3week2">
+        <h1>
+            Term 3 SWQ AEM:
+        </h1>
+        <br><br>
+        <video class="video" width=60% controls>
+            <source src="https://github.com/hoaxyu/esg/blob/master/vlad.02.mp4?raw=true"  type="video/mp4">
+        </video>
+    </div>
+</center>
+
+
+
+
+
+
+
+   
+</body>
