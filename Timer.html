@@ -1,0 +1,143 @@
+<!doctype html>
+<style>
+*{
+    text-decoration: none;
+    margin:0;
+    padding: 0;
+}
+.show{
+    top: 5px;
+    color: white;
+    font-size: 50px;
+}
+.show2{
+    color: white;
+    font-size: 50px;
+}
+.t{
+    font-size: 50px;
+    border: 0px;
+    border-bottom: 0.2em red solid;
+    background-color: #333;
+    color: white;
+}
+.t2{
+    font-size: 50px;
+    border-radius: 2em;
+    padding: 0.3em;
+    background-color: #333;
+    color: white;
+    border-color: red 2em solid;
+    margin: 5px;
+}
+.t2:hover{
+    background-color: white;
+    color: #333;
+    border-color: red 2em solid;
+}
+*{
+   margin: 0;
+   padding: 0;
+}
+body{
+    
+    background-color: #120f13;
+}
+
+.Clock{
+
+background-color: #333;
+margin: 13px;
+border-radius: 2em;
+    
+}
+.nav{
+    background-color: #333;
+    font-size: 60px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    color: white;
+    border-radius: 2em;
+}
+.nav h1{
+    padding: 2px;
+}
+
+</style>
+<head>
+    
+</head>
+<body>
+    
+<center>
+    <div class="nav">
+        <h1>
+            AHMEDTIMER
+        </h1>
+    </div>
+</center>
+<br><br><br><br>
+
+    <div class = "Clock" id = "clock">
+       <br><br>
+    <center>
+        <h1 class="show">
+            Set up the timer by typing the number of seconds
+        </h1>
+        <br>
+        <input type="text" id="in" class ="t"><br><br>
+        <button onclick="setup()" class="t2">Start Timer</button> <button onclick="window.location.reload();" class="t2">Restart</button>
+<h1 id ="timer" class ="show2">
+
+</h1>
+<br><br>
+<h1 class="show">Live Time Right Now:</h1><br>
+<h1 class ="show2" id="date"> .... </h1>
+<br>
+<br><br>
+</div>
+<br>
+<center>
+    <div class="end">
+<img src ="wall.png" height = "300px" class="imglock">
+</div>
+</center>
+<script>
+    function setup(){
+        var timer = document.getElementById('timer');
+        var counter = document.getElementById('in').value;
+        function yare(){
+            if(counter>0){
+
+           var hours = counter/3600;
+           var minutes= counter/60;
+           var seconds=counter; 
+           timer.innerHTML = Math.floor(hours) + " hours or " + Math.floor(minutes) + " minutes or " + Math.round(seconds) + " seconds"; 
+           counter--;
+           }
+           else if(counter == 0){
+               counter = "The timer ended";
+               timer.innerHTML= counter;
+
+           }
+        }
+        setInterval(yare, 1000);
+    }
+    window.onload = yare;
+    function yare(){
+        var date = document.getElementById('date');
+        function sat(){
+            date.innerHTML=Date();
+        }
+        setInterval(sat, 1000);
+
+    }
+</script>
+
+
+
+
+</center>
+</body>

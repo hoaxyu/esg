@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+    }
+    body{
+        background-color: silver;
+    }
+.start{
+    width: 100%;
+    height: 300px;
+    background-color: rgb(27, 70, 27);
+}
+.start h1{
+    
+    
+    color: white;
+    text-align: center;
+    top: -150px;
+    font-size: 70px;
+}
+.nav{
+    
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    position:sticky;
+    top:0;
+}
+.nav ul{
+  
+    margin: 0;
+    padding: 0;
+    
+    background-color: #333;
+   
+    
+    
+}
+.nav ul li{
+    
+    font-size: 30px;
+    
+    display: inline-block;
+    padding: 20px;
+    
+}
+.nav ul li a{
+    
+    margin: 5px;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    list-style-type: none;
+}
+.active{
+    background-color:rgb(27, 70, 27);
+}
+.no:hover{
+    background-color: rgb(0,0,0,0.8);
+}
+.toggle{
+    background-color: #333;
+    width: 100%;
+    padding: 0.5em;
+    display: none;
+    justify-content: end;
+    position:sticky !important;
+    top:0 !important;
+}
+
+.fa:hover{
+    color: green !important;
+}
+.fa{
+    float: right !important;
+}
+@media only screen and (max-width: 700px){
+    .nav ul li{
+        display: flex;
+        
+        transition: 0.5s;
+        
+    }
+    .nav{
+        transform: translate(-100%, 0);
+        display:none;
+    }
+    .toggle{
+        display: flex;
+    }
+    .toggle2{
+        display: none;
+    }
+    
+    
+}
+@media only screen and (min-width: 700px){
+    .nav{
+        transform: translate(0,0);
+    }
+}
+</style>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Form</title>
+</head>
+<body>
+    
+    <div class ="start">
+        <br><br><br><br><br><br>
+        <h1>
+            Home
+        </h1>
+        
+    </div>
+    <script>
+        
+        var count = 0;
+        
+        function yare(){
+            var nav = document.getElementById('nav');
+            
+            
+            if(nav.style.transform = "translate(-100%, 0)"){
+                nav.style.transform = "translate(0, 0)";
+                document.getElementById('yare2').style.display= "flex";
+                document.getElementById('yare').style.display= "none";
+                document.getElementById('nav').style.display="block"
+                }
+        }
+        function yare2(){
+            var nav = document.getElementById('nav');
+            if(nav.style.transform = "translate(0, 0)"){
+                nav.style.transform = "translate(-100%, 0)";
+                document.getElementById('yare').style.display= "flex";
+                document.getElementById('yare2').style.display= "none";
+                document.getElementById('nav').style.display="none";
+                }
+                
+        }
+    </script>
+    <div class="toggle">
+    <div class ="toggle1" id="yare">
+    <i onclick ="yare()" id="toggle" class="fa fa-bars" style="font-size:30px; color: white; display: flex; justify-content: end; left: 1em; cursor: pointer;"  ></i>
+    </div><div class ="toggle2" id="yare2">
+        <i onclick ="yare2()" id="toggle" class="fa fa-bars" style="font-size:30px; color: white; display: flex; justify-content: end; left: 1em; cursor: pointer;"  ></i>
+        </div>
+    </div>
+    <div class ="nav" id="nav">
+        <ul>
+            <li class ="active" id="li"><a href="#">Home</a></li><li id="li" class ="no"><a href="homework.html">Homework</a></li><li id="li" class ="no"><a href="videos.html">Videos</a></li><li class ="no" id="li"><a href="episode.html">Episode</a>
+        </ul>
+    </div>
+<br><br>
+
+
+
+
+
+
+
+
+<style>
+    button{
+        font-size: 30px;
+        background-color: green;
+        color: white;
+        padding: 0.5em;
+        border: none;
+        border-radius: 2em;
+    }
+    .teams{
+        border-bottom: 1em black solid;
+    }
+    .teams button{
+        font-size: 30px;
+        background-color: green;
+        color: white;
+        padding: 0.5em;
+        border: none;
+        border-top-right-radius: 2em;
+        border-bottom-right-radius: 2em;
+        border-top-left-radius: 0em;
+        border-bottom-left-radius: 0em;
+        outline: none;
+        cursor: pointer;
+    }
+    .teams input{
+        font-size: 30px;
+        background-color: #333;
+        color: white;
+        padding: 0.5em;
+        border: none;
+        border-top-left-radius: 2em;
+        border-bottom-left-radius: 2em;
+        outline: none;
+    }
+    @media only screen and (max-width:700px){
+        .teams input{
+            font-size: 17px;
+        }
+        .teams button{
+            font-size: 17px;
+        }
+    }
+    button:hover{
+        background-color: black;
+        color: green;
+    }
+    h1{
+        font-size: 50px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    .attendance{
+        border-bottom: 1em black solid;
+    }
+    .table{
+        width: 90%;
+        
+    }
+    button a{
+        color: white;
+        text-decoration: none;
+    }
+    button:hover a{
+        color: green;
+    }
+    
+</style>
+<center>
+    <div class="attendance">
+    <h1>
+        All Attendance Links:
+    </h1>
+    <br><br>
+    
+<button onclick="window.open('https://forms.office.com/Pages/ResponsePage.aspx?id=BcfdYznIHEegZcnM9MOT0JVAXRpBHEROhCNiYedsNUhURUw4MDNWRUcySFA1QVExNzIyMUcyOTU3WC4u')">
+    
+Mr Wael's Link
+</button>
+<br><br>
+<button onclick="window.open('https://forms.office.com/Pages/ResponsePage.aspx?id=BcfdYznIHEegZcnM9MOT0ALOgT6BmnRDlBhRR4QydZFUREJESlFXN0VRRVhWU1BPOVRJSjk3N0tITy4u')">Mr Ahmed's Link</button>
+<br><br><br><br>
+</div>
+<div class = "teams">
+    <br><br>
+    <h1>
+        Go To The Class Room:
+    </h1>
+    <br><br>
+    <input id = "class1" placeholder="Class Name"><button id="teamsbutton" onclick="teams()">Go To Class</button>
+    <br><br>
+    
+    <br><br>
+</div>
+<br><br>
+<button onclick="window.open('timer.html')">Timer</button>
+<script>
+function teams(){
+    var input = document.getElementById('class1').value;
+    if(input == "chemistry"){
+        window.open("https://teams.microsoft.com/_#/school/conversations/CHM71?threadId=19:8652ea8ff505445795ff6755dfa18809@thread.skype&ctx=channel");
+    }
+    if(input == "physics"){
+        window.open("https://teams.microsoft.com/_#/school/conversations/General?threadId=19:33586d7b169d479e8fe1e1a7d75c84a8@thread.tacv2&ctx=channel");
+    }
+    if(input == "english"){
+        window.open("https://teams.microsoft.com/_#/school/conversations/General?threadId=19:e0daae35e2334ca0a34193b1791a89d5@thread.tacv2&ctx=channel");
+    }
+    if(input == "math"){
+        window.open("https://teams.microsoft.com/_#/school/conversations/General?threadId=19:13d3cb09341243b5ab34d149fdb84cf1@thread.tacv2&ctx=channel");
+    }
+    if(input == "aem"){
+        window.open("https://teams.microsoft.com/_#/school/conversations/General?threadId=19:8125d39c570b4deb86cda1e7ef02d41d@thread.tacv2&ctx=channel");
+    }
+    if(input == "aee"){
+        window.open("https://teams.microsoft.com/_#/school/conversations/General?threadId=19:91c52cd89baa42fbbd33d2a528f76491@thread.tacv2&ctx=channel");
+    }
+    if(input == "arabic"){
+        window.open("https://teams.microsoft.com/_#/school/conversations/General?threadId=19:f5fc4ca965914024b3f339aad87dc921@thread.tacv2&ctx=channel");
+    }
+    if(input == "islamic"){
+        window.open("https://teams.microsoft.com/_#/school/conversations/General?threadId=19:38e66e30cb8648c6b4cf255a6cc6439d@thread.tacv2&ctx=channel");
+    }
+    if(input == "social studies"){
+        window.open("https://teams.microsoft.com/_#/school/conversations/General?threadId=19:0d9c1f61b5f4410294ad926db20fd507@thread.tacv2&ctx=channel");
+    }
+}
+class1.addEventListener("keyup", function(event){
+    if(event.keyCode == 13){
+        event.preventDefault;
+        document.getElementById('teamsbutton').click();
+    }
+})
+</script>
+<div class ="time">
+    <br><br>
+    <h2 id="datex">
+
+    </h2>
+    <br><br>
+    <img src="https://o4emh3c2oolmae5vswjmrq-on.drv.tw/Altemo/time%20table.jpg" class="table">
+    <br><br>
+    <script>
+        window.onload = yarezo;
+        function yarezo(){
+            var date = document.getElementById('datex');
+            function timer(){
+                date.innerHTML = Date();
+            }
+            setInterval(timer, 1000);
+        }
+        document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+    </script>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+</body>

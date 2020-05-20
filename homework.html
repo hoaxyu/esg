@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+    }
+    body{
+        background-color: silver;
+    }
+.start{
+    width: 100%;
+    height: 300px;
+    background-color: rgb(27, 70, 27);
+}
+.start h1{
+    
+    
+    color: white;
+    text-align: center;
+    top: -150px;
+    font-size: 70px;
+}
+.nav{
+    
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    position:sticky;
+    top:0;
+}
+.nav ul{
+  
+    margin: 0;
+    padding: 0;
+    
+    background-color: #333;
+   
+    
+    
+}
+.nav ul li{
+    
+    font-size: 30px;
+    
+    display: inline-block;
+    padding: 20px;
+    
+}
+.nav ul li a{
+    
+    margin: 5px;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    list-style-type: none;
+}
+.active{
+    background-color:rgb(27, 70, 27);
+}
+.no:hover{
+    background-color: rgb(0,0,0,0.8);
+}
+.toggle{
+    background-color: #333;
+    width: 100%;
+    padding: 0.5em;
+    display: none;
+    justify-content: end;
+}
+
+.fa:hover{
+    color: green !important;
+}
+.fa{
+    float: right !important;
+}
+@media only screen and (max-width: 700px){
+    .nav ul li{
+        display: flex;
+        
+        transition: 0.5s;
+        
+    }
+    .nav{
+        transform: translate(-100%, 0);
+        display:none;
+    }
+    .toggle{
+        display: flex;
+    }
+    .toggle2{
+        display: none;
+    }
+    
+    
+}
+@media only screen and (min-width: 700px){
+    .nav{
+        transform: translate(0,0);
+    }
+}
+</style>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Form</title>
+</head>
+<body>
+    
+    <div class ="start">
+        <br><br><br><br><br><br>
+        <h1>
+            Home Work
+        </h1>
+        
+    </div>
+    <script>
+        
+        var count = 0;
+        
+        function yare(){
+            var nav = document.getElementById('nav');
+            
+            
+            if(nav.style.transform = "translate(-100%, 0)"){
+                nav.style.transform = "translate(0, 0)";
+                document.getElementById('yare2').style.display= "flex";
+                document.getElementById('yare').style.display= "none";
+                document.getElementById('nav').style.display="block"
+                }
+        }
+        function yare2(){
+            var nav = document.getElementById('nav');
+            if(nav.style.transform = "translate(0, 0)"){
+                nav.style.transform = "translate(-100%, 0)";
+                document.getElementById('yare').style.display= "flex";
+                document.getElementById('yare2').style.display= "none";
+                document.getElementById('nav').style.display="none";
+                }
+                
+        }
+    </script>
+    <div class="toggle">
+    <div class ="toggle1" id="yare">
+    <i onclick ="yare()" id="toggle" class="fa fa-bars" style="font-size:30px; color: white; display: flex; justify-content: end; left: 1em; cursor: pointer;"  ></i>
+    </div><div class ="toggle2" id="yare2">
+        <i onclick ="yare2()" id="toggle" class="fa fa-bars" style="font-size:30px; color: white; display: flex; justify-content: end; left: 1em; cursor: pointer;"  ></i>
+        </div>
+    </div>
+    <div class ="nav" id="nav">
+        <ul>
+            <li class ="no" id="li"><a href="index.html">Home</a></li><li id="li" class ="active"><a href="homework.html">Homework</a></li><li id="li" class ="no"><a href="videos.html">Videos</a></li><li class ="no" id="li"><a href="episode.html">Episode</a>
+        </ul>
+    </div>
+    <br><br>
+
+
+
+
+
+<center>
+    <style>
+        button{
+        font-size: 30px;
+        background-color: green;
+        color: white;
+        padding: 0.5em;
+        border: none;
+        border-radius: 2em;
+    }
+    button:hover{
+        background-color: black;
+        color: green;
+    }
+    h1{
+        font-size: 50px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    .selflearning{
+        border-bottom: 1em black solid;
+    }
+    .homework1{
+     
+    }
+    .table{
+        width: 90%;
+        
+    }
+    button a{
+        color: white;
+        text-decoration: none;
+    }
+    button:hover a{
+        color: green;
+    }
+    .max{
+        font-size: 20px;
+        border-radius: 2em !important;
+        background-color: gray;
+        color: black;
+    }
+    .min{
+        font-size: 20px;
+        border-radius: 2em !important;
+        background-color: gray;
+        color: black;
+        display: none;
+    }
+    .max:hover{
+        font-size: 20px;
+        border-radius: 2em !important;
+        background-color: rgb(83, 76, 76);
+        color: white;
+    }
+    .min:hover{
+        font-size: 20px;
+        border-radius: 2em !important;
+        background-color: rgb(83, 76, 76);
+        color: white;
+        display: none;
+    }
+    </style>
+    <div class ="selflearning">
+        <br><br>
+        <h1>
+            Self Learning: None Right Now
+        </h1>
+        
+    <br><br><br><br>
+    </div>
+    <br><br>
+    <div class="homework1">
+        <h1>
+            No Homework Right Now
+        </h1>
+        <br><br><br><br>
+    </div>
+<script>
+    function press(){
+    document.getElementById('iframe1').style.height="900px"; 
+    document.getElementById('iframe1').style.width="90%";
+    document.getElementById('max').style.display= "none";
+    document.getElementById('min').style.display="block";
+    }
+    function press2(){
+    document.getElementById('iframe1').style.height="100px"; 
+    document.getElementById('iframe1').style.width="50%";
+    document.getElementById('max').style.display= "block";
+    document.getElementById('min').style.display="none";
+    }
+</script>
+
+</center>
+
+
+
+
+
+
+
+
+
+
+
+
+   
+</body>
